@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), ui-serif, Georgia, serif;
+  
+  --color-brand-primary: #1e293b; 
+  --color-brand-accent: #334155;
+  --color-brand-cozy: #f8f5f2; 
+  --color-brand-action: #475569;
+}
+
+html {
+  scroll-behavior: smooth;
+}
