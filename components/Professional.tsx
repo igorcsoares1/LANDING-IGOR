@@ -30,17 +30,20 @@ export const Professional = () => {
           viewport={{ once: true }}
           className="order-1 relative"
         >
-          <div className="relative aspect-[3/4] max-h-[650px] rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-white/10">
+          <div className="relative aspect-[3/4] max-h-[650px] rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-white/5">
             <Image
-              src="https://i.ibb.co/FLs6SrDq/igor-foto-profissional.jpg"
-              alt="Igor Soares - Psicólogo em seu consultório"
+              src="https://raw.githubusercontent.com/igorcsoares1/LANDING-IGOR/main/igor-foto-profissional.png"
+              alt="Igor Soares, Psicólogo Clínico, em seu ambiente de atendimento clínico preparado para sessões de psicoterapia e saúde mental"
               fill
               className="object-cover object-top transition-transform duration-1000 hover:scale-105"
               priority
               unoptimized={true}
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f3d] via-transparent to-transparent opacity-60" />
+            {/* Soft Edge Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f3d] via-transparent to-transparent opacity-80" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_50%,rgba(15,31,61,0.4)_100%)]" />
+            <div className="absolute inset-0 ring-inset ring-1 ring-white/10 rounded-[2rem]" />
 
             {/* Overlay badge matching the "Diplomas" vibe */}
             <div className="absolute bottom-8 left-8 right-8">

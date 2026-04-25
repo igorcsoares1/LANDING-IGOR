@@ -17,10 +17,10 @@ const Approaches = dynamic(() => import('@/components/Approaches').then(mod => m
 const Testimonials = dynamic(() => import('@/components/Testimonials').then(mod => mod.Testimonials));
 const Quiz = dynamic(() => import('@/components/Quiz').then(mod => mod.Quiz));
 const FAQ = dynamic(() => import('@/components/FAQ').then(mod => mod.FAQ));
-const BookingForm = dynamic(() => import('@/components/BookingForm').then(mod => mod.BookingForm));
 const Contact = dynamic(() => import('@/components/Contact').then(mod => mod.Contact));
 const Footer = dynamic(() => import('@/components/Footer').then(mod => mod.Footer));
-const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton').then(mod => mod.WhatsAppButton), { ssr: false });
+const WhatsAppChat = dynamic(() => import('@/components/WhatsAppChat').then(mod => mod.WhatsAppChat), { ssr: false });
+const ExitPopup = dynamic(() => import('@/components/ExitPopup').then(mod => mod.ExitPopup), { ssr: false });
 
 export default function LandingPage() {
   return (
@@ -36,10 +36,10 @@ export default function LandingPage() {
       <Testimonials />
       <Quiz />
       <FAQ />
-      <BookingForm />
       <Contact />
       <Footer />
-      <WhatsAppButton />
+      <WhatsAppChat />
+      <ExitPopup />
     </main>
   );
 }

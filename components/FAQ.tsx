@@ -11,7 +11,7 @@ export const FAQ = () => {
   const faqs = [
     { 
       q: "Como funciona a primeira sessão?", 
-      a: "A primeira sessão é uma conversa inicial de acolhimento, sem pressão e sem julgamento. Vamos entender o que te trouxe até aqui, o que você está sentindo e o que espera da terapia. Ao final, você decide se quer continuar. Não há compromisso." 
+      a: "A primeira sessão é uma conversa de acolhimento e avaliação. Vamos entender o que te trouxe até aqui, o que você está sentindo e o que espera da terapia. Ao final, definimos juntos os próximos passos do seu tratamento." 
     },
     { 
       q: "Quanto tempo dura o tratamento?", 

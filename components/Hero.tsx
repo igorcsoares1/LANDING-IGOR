@@ -127,21 +127,23 @@ export const Hero = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="relative hidden lg:block"
         >
-          {/* Gradient overlay left */}
-          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0f1f3d] to-transparent z-10" />
-          {/* Gradient overlay bottom */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0f1f3d] to-transparent z-10" />
+          {/* Gradient overlay left - wider for smoothness */}
+          <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-[#0f1f3d] via-[#0f1f3d]/50 to-transparent z-10" />
+          {/* Gradient overlay bottom - taller for smoothness */}
+          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0f1f3d] via-[#0f1f3d]/50 to-transparent z-10" />
 
-          <div className="h-full min-h-[600px] relative overflow-hidden ring-1 ring-white/10 rounded-l-[3rem]">
+          <div className="h-full min-h-[600px] relative overflow-hidden ring-1 ring-white/5 rounded-l-[3rem] shadow-inner">
             <Image
-              src="https://i.ibb.co/FLs6SrDq/igor-foto-profissional.jpg"
-              alt="Igor Soares - Psicólogo Clínico"
+              src="https://raw.githubusercontent.com/igorcsoares1/LANDING-IGOR/main/igor-foto-profissional.png"
+              alt="Igor Soares, Psicólogo Clínico CRP 03/27924, especialista em Ansiedade e Burnout, em retrato profissional para atendimento psicoterápico"
               fill
               className="object-cover object-top"
               priority
               unoptimized={true}
               referrerPolicy="no-referrer"
             />
+            {/* Vignette effect for softer edges */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(15,31,61,0.4)_100%)] z-10" />
           </div>
 
           {/* Name badge */}
@@ -155,8 +157,8 @@ export const Hero = () => {
       {/* Mobile image */}
       <div className="lg:hidden absolute inset-0 opacity-10 pointer-events-none">
         <Image
-          src="https://i.ibb.co/FLs6SrDq/igor-foto-profissional.jpg"
-          alt="Igor Soares"
+          src="https://raw.githubusercontent.com/igorcsoares1/LANDING-IGOR/main/igor-foto-profissional.png"
+          alt="Retrato do Psicólogo Igor Soares para atendimento clínico online"
           fill
           className="object-cover object-top"
           unoptimized={true}

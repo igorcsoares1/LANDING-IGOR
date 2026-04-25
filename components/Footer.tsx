@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
@@ -12,7 +13,7 @@ export const Footer = () => {
         </div>
         <div className="flex gap-6 text-xs text-slate-500 font-semibold">
           <a href="#sobre" className="hover:text-slate-900 transition-colors">Sobre</a>
-          <a href="#" className="hover:text-slate-900 transition-colors">Privacidade</a>
+          <Link href="/privacidade" className="hover:text-slate-900 transition-colors">Privacidade</Link>
           <a href="#" className="hover:text-slate-900 transition-colors">Termos</a>
         </div>
         <div className="text-[10px] text-slate-400 font-medium text-center">

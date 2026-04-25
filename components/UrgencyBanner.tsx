@@ -6,6 +6,7 @@ import { WHATSAPP_URL } from '@/lib/constants';
 
 export const UrgencyBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const currentMonth = new Intl.DateTimeFormat('pt-BR', { month: 'long' }).format(new Date());
 
   if (!isVisible) return null;
 
@@ -15,7 +16,7 @@ export const UrgencyBanner = () => {
         <div className="flex items-center gap-3 flex-1 justify-center">
           <div className="w-2 h-2 rounded-full bg-red-400 animate-pulse shrink-0" />
           <p className="text-xs md:text-sm font-medium text-center">
-            <span className="font-bold text-red-300">Apenas 3 vagas</span> disponíveis para abril —{' '}
+            <span className="font-bold text-red-300">Apenas 3 vagas</span> disponíveis para {currentMonth} —{' '}
             <a 
               href={WHATSAPP_URL}
               target="_blank"
