@@ -21,6 +21,7 @@ export const UrgencyBanner = () => {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => (window as any).gtag_report_conversion?.()}
               className="underline font-bold hover:text-slate-300 transition-colors inline-flex items-center gap-1"
             >
               Agende agora <ArrowRight className="w-3 h-3" />

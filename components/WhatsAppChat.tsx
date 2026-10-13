@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Send } from 'lucide-react';
+import Image from 'next/image';
 import { WHATSAPP_URL } from '@/lib/constants';
 
 export const WhatsAppChat = () => {
@@ -49,11 +50,15 @@ export const WhatsAppChat = () => {
           >
             {/* Header */}
             <div className="flex items-center gap-3 px-4 py-3 bg-[#075e54]">
-              <div className="relative">
-                <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center text-lg font-bold text-white bg-[#128c7e]">
-                  IS
-                </div>
-                <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-green-400 border-2 border-white" />
+              <div className="relative w-10 h-10">
+                <Image
+                  src="https://raw.githubusercontent.com/igorcsoares1/LANDING-IGOR/main/igor-foto-profissional.png"
+                  alt="Igor Soares"
+                  fill
+                  className="rounded-full object-cover object-top border border-white/20"
+                  unoptimized={true}
+                />
+                <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-green-400 border-2 border-[#075e54]" />
               </div>
               <div className="flex-1">
                 <p className="text-white font-bold text-sm">Igor Soares</p>
@@ -103,6 +108,7 @@ export const WhatsAppChat = () => {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => (window as any).gtag_report_conversion?.()}
               className="flex items-center gap-3 px-4 py-3 transition-colors bg-[#075e54] hover:bg-[#064e47]"
             >
               <div className="flex-1 px-3 py-2 rounded-full text-sm bg-white/15 text-white/70">

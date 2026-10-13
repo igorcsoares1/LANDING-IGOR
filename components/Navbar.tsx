@@ -30,6 +30,7 @@ export const Navbar = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => (window as any).gtag_report_conversion?.()}
             className="bg-[#c9a84c] text-[#0f1f3d] px-6 py-2.5 rounded-lg text-xs font-black uppercase tracking-widest hover:bg-[#e8d5a3] transition-all shadow-lg"
           >
             Agendar consulta
@@ -64,7 +65,10 @@ export const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#c9a84c] text-[#0f1f3d] px-6 py-4 rounded-xl text-sm font-black text-center mt-2 flex items-center justify-center gap-2"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  (window as any).gtag_report_conversion?.();
+                  setIsOpen(false);
+                }}
               >
                 Agendar Consulta <ArrowRight className="w-4 h-4" />
               </a>

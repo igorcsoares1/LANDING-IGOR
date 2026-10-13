@@ -85,6 +85,7 @@ export const Hero = () => {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => (window as any).gtag_report_conversion?.()}
               className="bg-[#c9a84c] text-[#0f1f3d] px-8 py-4 rounded-xl text-sm font-black uppercase tracking-wider hover:bg-[#e8d5a3] transition-all shadow-2xl shadow-[#c9a84c]/20 flex items-center justify-center gap-2 group"
             >
               Fale comigo agora

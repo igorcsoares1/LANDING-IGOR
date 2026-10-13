@@ -1,5 +1,5 @@
-import Script from 'next/script';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Inter, Lora } from 'next/font/google';
 import './globals.css';
 
@@ -15,35 +15,21 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: 'Igor Soares | Psicólogo Especialista em Burnout e Saúde Mental',
-  description:
-    'Psicologia Clínica especializada em Burnout e Saúde Mental para Lideranças e Executivos. Atendimento online e sigiloso.',
+  description: 'Psicologia Clínica especializada em Burnout e Saúde Mental para Lideranças e Executivos. Atendimento online e sigiloso.',
   icons: {
-    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%230f1f3d"/><path d="M50 75C35 60 25 50 25 40 25 30 33 25 40 25 45 25 48 28 50 30 52 28 55 25 60 25 67 25 75 30 75 40 75 50 65 60 50 75Z" fill="%23c9a84c"/></svg>',
+    icon: 'https://raw.githubusercontent.com/igorcsoares1/LANDING-IGOR/main/igor-foto-profissional.png',
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${inter.variable} ${lora.variable}`}
-    >
-      <body
-        suppressHydrationWarning
-        className="font-sans antialiased bg-[#fdfcfb] text-gray-900"
-      >
-        {/* Google Ads */}
+    <html lang="pt-BR" className={`${inter.variable} ${lora.variable}`}>
+      <head>
         <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18498026449"
           strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18498026449"
         />
-
-        <Script id="google-ads-tag" strategy="afterInteractive">
+        <Script id="google-tag-base" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -51,7 +37,26 @@ export default function RootLayout({
             gtag('config', 'AW-18498026449');
           `}
         </Script>
-
+        <Script id="google-ads-conversion" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-18498026449/y5ziCJqVypsdENH3xfRE',
+                  'value': 1.0,
+                  'currency': 'BRL',
+                  'event_callback': callback
+              });
+              return false;
+            }
+          `}
+        </Script>
+      </head>
+      <body suppressHydrationWarning className="font-sans antialiased bg-[#fdfcfb] text-gray-900">
         {children}
       </body>
     </html>

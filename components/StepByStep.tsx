@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { WHATSAPP_URL } from '@/lib/constants';
 
@@ -70,6 +70,7 @@ export const StepByStep = () => {
                 href={WHATSAPP_URL} 
                 target="_blank" 
                 rel="noopener noreferrer" 
+                onClick={() => (window as any).gtag_report_conversion?.()}
                 className="inline-flex items-center gap-3 bg-[#c9a84c] text-[#0f1f3d] px-10 md:px-16 py-5 md:py-6 rounded-2xl font-bold text-lg md:text-xl hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-xl group"
               >
                 Agendar via WhatsApp

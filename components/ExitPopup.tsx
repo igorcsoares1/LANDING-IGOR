@@ -91,7 +91,10 @@ export const ExitPopup = () => {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setVisible(false)}
+                  onClick={() => {
+                    (window as any).gtag_report_conversion?.();
+                    setVisible(false);
+                  }}
                   className="flex items-center justify-center gap-2 w-full py-4 rounded-xl font-black text-sm uppercase tracking-wider transition-all mb-3 group"
                   style={{ background: '#c9a84c', color: '#0f1f3d' }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#e8d5a3'; }}

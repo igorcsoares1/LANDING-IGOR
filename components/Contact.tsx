@@ -26,6 +26,7 @@ export const Contact = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => (window as any).gtag_report_conversion?.()}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-slate-900 text-white px-8 md:px-12 py-4 md:py-6 rounded-xl md:rounded-2xl text-base md:text-lg font-bold hover:bg-slate-800 transition-all shadow-xl group"
           >
             Iniciar jornada terapêutica

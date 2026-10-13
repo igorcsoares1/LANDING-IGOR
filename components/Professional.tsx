@@ -113,6 +113,7 @@ export const Professional = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => (window as any).gtag_report_conversion?.()}
             className="inline-flex items-center gap-2 bg-[#c9a84c] text-[#0f1f3d] px-8 py-4 rounded-xl font-black text-sm uppercase tracking-wider hover:bg-[#e8d5a3] transition-all shadow-xl group"
           >
             Agendar minha consulta

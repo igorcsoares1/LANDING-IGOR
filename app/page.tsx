@@ -1,26 +1,21 @@
 'use client';
 
 import React from 'react';
-import dynamic from 'next/dynamic';
-
-// Static imports for critical above-the-fold content
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { UrgencyBanner } from '@/components/UrgencyBanner';
-
-// Dynamic imports for below-the-fold content
-const FocusAreas = dynamic(() => import('@/components/FocusAreas').then(mod => mod.FocusAreas));
-const Professional = dynamic(() => import('@/components/Professional').then(mod => mod.Professional));
-const Benefits = dynamic(() => import('@/components/Benefits').then(mod => mod.Benefits));
-const StepByStep = dynamic(() => import('@/components/StepByStep').then(mod => mod.StepByStep));
-const Approaches = dynamic(() => import('@/components/Approaches').then(mod => mod.Approaches));
-const Testimonials = dynamic(() => import('@/components/Testimonials').then(mod => mod.Testimonials));
-const Quiz = dynamic(() => import('@/components/Quiz').then(mod => mod.Quiz));
-const FAQ = dynamic(() => import('@/components/FAQ').then(mod => mod.FAQ));
-const Contact = dynamic(() => import('@/components/Contact').then(mod => mod.Contact));
-const Footer = dynamic(() => import('@/components/Footer').then(mod => mod.Footer));
-const WhatsAppChat = dynamic(() => import('@/components/WhatsAppChat').then(mod => mod.WhatsAppChat), { ssr: false });
-const ExitPopup = dynamic(() => import('@/components/ExitPopup').then(mod => mod.ExitPopup), { ssr: false });
+import { FocusAreas } from '@/components/FocusAreas';
+import { Professional } from '@/components/Professional';
+import { Benefits } from '@/components/Benefits';
+import { StepByStep } from '@/components/StepByStep';
+import { Approaches } from '@/components/Approaches';
+import { Testimonials } from '@/components/Testimonials';
+import { Quiz } from '@/components/Quiz';
+import { FAQ } from '@/components/FAQ';
+import { Contact } from '@/components/Contact';
+import { Footer } from '@/components/Footer';
+import { WhatsAppChat } from '@/components/WhatsAppChat';
+import { ExitPopup } from '@/components/ExitPopup';
 
 export default function LandingPage() {
   return (

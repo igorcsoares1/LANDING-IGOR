@@ -91,6 +91,7 @@ export const Quiz = () => {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => (window as any).gtag_report_conversion?.()}
                 className="bg-slate-900 text-white px-8 md:px-12 py-4 md:py-5 rounded-xl font-bold uppercase tracking-wider hover:bg-slate-800 transition-all shadow-xl flex items-center justify-center text-sm md:text-base"
               >
                 Conversar com Igor

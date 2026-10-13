@@ -96,6 +96,7 @@ export const FAQ = () => {
             href={WHATSAPP_URL} 
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={() => (window as any).gtag_report_conversion?.()}
             className="inline-flex items-center gap-2 text-slate-900 font-bold uppercase tracking-widest text-xs border-b-2 border-slate-900 pb-1 hover:gap-4 transition-all"
           >
             Falar pelo WhatsApp <ArrowRight className="w-4 h-4" />
