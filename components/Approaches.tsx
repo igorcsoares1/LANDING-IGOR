@@ -16,7 +16,7 @@ export const Approaches = () => {
       title: "Mindfulness",
       fullTitle: "Atenção Plena",
       desc: "Técnicas que ajudam a reduzir a reatividade emocional e a ansiedade. Ensinamos seu cérebro a 'desligar' do modo de alerta.",
-      benefits: ["Redução do cortisol", "Melhora do sono", "Clareza mental"]
+      benefits: ["Técnicas para lidar com o estresse", "Melhora do sono", "Clareza mental"]
     }
   ];
 

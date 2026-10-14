@@ -14,8 +14,8 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: 'Igor Soares | Psicólogo Especialista em Burnout e Saúde Mental',
-  description: 'Psicologia Clínica especializada em Burnout e Saúde Mental para Lideranças e Executivos. Atendimento online e sigiloso.',
+  title: 'Igor Soares | Psicólogo Online para Burnout e Ansiedade | CRP 03/27924',
+  description: 'Psicólogo clínico com foco em Burnout e Ansiedade. Atendimento online e sigiloso para todo o Brasil. CRP 03/27924.',
   icons: {
     icon: 'https://raw.githubusercontent.com/igorcsoares1/LANDING-IGOR/main/igor-foto-profissional.png',
   },

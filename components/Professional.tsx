@@ -10,7 +10,7 @@ export const Professional = () => {
   const credentials = [
     { icon: Award, label: 'CRP 03/27924', desc: 'Registro ativo · CFP' },
     { icon: BookOpen, label: '3 anos', desc: 'De prática clínica' },
-    { icon: Heart, label: '+100 pacientes', desc: 'Atendidos com sucesso' },
+    { icon: Heart, label: '+100 pacientes', desc: 'Atendidos' },
     { icon: Shield, label: 'Sigilo total', desc: 'Ética e confidencialidade' },
   ];
 
@@ -35,8 +35,9 @@ export const Professional = () => {
               src="https://raw.githubusercontent.com/igorcsoares1/LANDING-IGOR/main/igor-foto-profissional.png"
               alt="Igor Soares, Psicólogo Clínico, em seu ambiente de atendimento clínico preparado para sessões de psicoterapia e saúde mental"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-top transition-transform duration-1000 hover:scale-105"
-              priority
+              loading="lazy"
               unoptimized={true}
               referrerPolicy="no-referrer"
             />
@@ -53,7 +54,7 @@ export const Professional = () => {
                   <p className="text-[#c9a84c] text-[10px] font-black uppercase tracking-[0.2em]">Psicólogo Clínico</p>
                 </div>
                 <p className="text-white font-serif text-2xl font-bold tracking-tight">Igor Soares</p>
-                <p className="text-slate-400 text-xs mt-1">Especialista em Saúde Mental & Performance</p>
+                <p className="text-slate-400 text-xs mt-1">Psicólogo com foco em Burnout e Ansiedade</p>
               </div>
             </div>
           </div>
@@ -78,7 +79,7 @@ export const Professional = () => {
           </div>
 
           <h2 className="font-serif text-3xl md:text-5xl mb-6 leading-tight tracking-tight">
-            Sou Igor Soares, psicólogo especializado em{' '}
+            Sou Igor Soares, psicólogo com foco em{' '}
             <span className="text-[#c9a84c] italic">Burnout e Ansiedade.</span>
           </h2>
 

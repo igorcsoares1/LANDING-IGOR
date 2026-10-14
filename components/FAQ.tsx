@@ -10,6 +10,10 @@ export const FAQ = () => {
 
   const faqs = [
     { 
+      q: "Qual o valor da sessão?", 
+      a: "O valor e as formas de pagamento são informados no primeiro contato pelo WhatsApp, sem compromisso. As sessões são individuais, online, com duração média de 50 minutos." 
+    },
+    { 
       q: "Como funciona a primeira sessão?", 
       a: "A primeira sessão é uma conversa de acolhimento e avaliação. Vamos entender o que te trouxe até aqui, o que você está sentindo e o que espera da terapia. Ao final, definimos juntos os próximos passos do seu tratamento." 
     },

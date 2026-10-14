@@ -1,30 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Shield, Star } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 import { WHATSAPP_URL } from '@/lib/constants';
 
 export const Hero = () => {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0 });
-
-  useEffect(() => {
-    const updateCountdown = () => {
-      const now = new Date();
-      const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1);
-      const diff = endOfMonth.getTime() - now.getTime();
-      setTimeLeft({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
-      });
-    };
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 60000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="min-h-screen bg-[#0f1f3d] relative overflow-hidden flex items-center">
       {/* Background glow */}
@@ -56,28 +38,10 @@ export const Hero = () => {
           </h1>
 
           <p className="text-slate-300 text-base lg:text-lg leading-relaxed mb-8 max-w-xl font-light">
-            Especialista em <strong className="text-white font-semibold">Burnout e Ansiedade</strong>. 
+            Psicólogo com foco em <strong className="text-white font-semibold">Burnout e Ansiedade</strong>. 
             Atendo pessoas que chegaram ao limite — esgotadas, sem energia e sem saber como sair desse ciclo. 
             Atendimento online para todo o Brasil.
           </p>
-
-          {/* Urgency */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6 }}
-            className="flex items-center gap-3 bg-red-950/40 border border-red-800/40 rounded-xl px-4 py-3 mb-8 max-w-md"
-          >
-            <div className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse shrink-0" />
-            <div>
-              <p className="text-red-200 text-sm font-semibold">
-                Apenas <span className="text-white font-bold">3 vagas disponíveis</span> este mês
-              </p>
-              <p className="text-red-400 text-xs mt-0.5">
-                Encerra em {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m
-              </p>
-            </div>
-          </motion.div>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-10">
@@ -99,24 +63,19 @@ export const Hero = () => {
             </a>
           </div>
 
-          {/* Social proof */}
+          {/* Ethical credentials proof */}
           <div className="grid grid-cols-3 gap-4 pt-8 border-t border-white/10">
             <div className="text-center">
-              <div className="flex justify-center gap-0.5 mb-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 fill-[#c9a84c] text-[#c9a84c]" />
-                ))}
-              </div>
-              <p className="text-sm font-bold text-white">5.0</p>
-              <p className="text-[10px] text-slate-500 uppercase tracking-wider mt-0.5">Avaliação</p>
+              <p className="text-base sm:text-lg font-serif font-bold text-white">CRP 03/27924</p>
+              <p className="text-[10px] text-slate-400 uppercase tracking-wider mt-0.5">Registro Ativo</p>
             </div>
             <div className="text-center border-x border-white/10">
               <p className="text-2xl font-serif font-bold text-white">100+</p>
-              <p className="text-[10px] text-slate-500 uppercase tracking-wider mt-0.5">Pacientes</p>
+              <p className="text-[10px] text-slate-400 uppercase tracking-wider mt-0.5">Pacientes Atendidos</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-serif font-bold text-white">3 anos</p>
-              <p className="text-[10px] text-slate-500 uppercase tracking-wider mt-0.5">Experiência</p>
+              <p className="text-base sm:text-lg font-serif font-bold text-white">100% Online</p>
+              <p className="text-[10px] text-slate-400 uppercase tracking-wider mt-0.5">Todo o Brasil</p>
             </div>
           </div>
         </motion.div>
@@ -136,10 +95,11 @@ export const Hero = () => {
           <div className="h-full min-h-[600px] relative overflow-hidden ring-1 ring-white/5 rounded-l-[3rem] shadow-inner">
             <Image
               src="https://raw.githubusercontent.com/igorcsoares1/LANDING-IGOR/main/igor-foto-profissional.png"
-              alt="Igor Soares, Psicólogo Clínico CRP 03/27924, especialista em Ansiedade e Burnout, em retrato profissional para atendimento psicoterápico"
+              alt="Igor Soares, Psicólogo Clínico CRP 03/27924, com foco em Burnout e Ansiedade, em retrato profissional para atendimento psicoterápico"
               fill
               className="object-cover object-top"
               priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
               unoptimized={true}
               referrerPolicy="no-referrer"
             />

@@ -7,30 +7,47 @@ import { WHATSAPP_URL } from '@/lib/constants';
 
 export const ExitPopup = () => {
   const [visible, setVisible] = useState(false);
-  const [shown, setShown] = useState(false);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // If already shown in this session, do not attach listeners or timers
+    if (sessionStorage.getItem('igor_exit_popup_shown') === 'true') {
+      return;
+    }
+
+    const mountTime = Date.now();
+    let canShow = false;
+
+    // Never show in the first 20 seconds
+    const unlockTimer = setTimeout(() => {
+      canShow = true;
+    }, 20000);
+
     const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0 && !shown) {
-        setVisible(true);
-        setShown(true);
+      if (e.clientY <= 0 && canShow && Date.now() - mountTime >= 20000) {
+        if (sessionStorage.getItem('igor_exit_popup_shown') !== 'true') {
+          sessionStorage.setItem('igor_exit_popup_shown', 'true');
+          setVisible(true);
+        }
       }
     };
 
-    // Mobile: show after 30 seconds
-    const timer = setTimeout(() => {
-      if (!shown) {
+    // Mobile fallback after 35 seconds (guaranteed > 20s and max once per visit)
+    const mobileTimer = setTimeout(() => {
+      if (sessionStorage.getItem('igor_exit_popup_shown') !== 'true') {
+        sessionStorage.setItem('igor_exit_popup_shown', 'true');
         setVisible(true);
-        setShown(true);
       }
-    }, 30000);
+    }, 35000);
 
     document.addEventListener('mouseleave', handleMouseLeave);
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
-      clearTimeout(timer);
+      clearTimeout(unlockTimer);
+      clearTimeout(mobileTimer);
     };
-  }, [shown]);
+  }, []);
 
   return (
     <AnimatePresence>
@@ -83,7 +100,7 @@ export const ExitPopup = () => {
                   Estou aqui para oferecer um <strong className="text-white">espaço seguro e sigiloso</strong> para cuidarmos da sua saúde mental.
                 </p>
                 <p className="text-sm mb-8" style={{ color: 'rgba(255,255,255,0.5)' }}>
-                  Muitos pacientes disseram que a maior dificuldade foi dar o primeiro passo. Não precisa estar pronto — só precisa começar.
+                  Não precisa estar pronto — só precisa começar.
                 </p>
 
                 {/* CTA */}

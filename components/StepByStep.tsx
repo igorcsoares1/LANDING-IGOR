@@ -16,7 +16,7 @@ export const StepByStep = () => {
     {
       number: "02",
       title: "Alinhamento",
-      desc: "Ajustamos o melhor dia e horário para seu atendimento, seja ele online ou presencial.",
+      desc: "Ajustamos o melhor dia e horário para seu atendimento por videochamada.",
       btn: false
     },
     {

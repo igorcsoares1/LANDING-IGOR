@@ -70,8 +70,11 @@ export const Quiz = () => {
               onClick={() => setShowResult(true)}
               className="w-full bg-white text-slate-950 hover:bg-slate-100 py-4 md:py-6 rounded-xl md:rounded-2xl text-base md:text-lg font-bold uppercase tracking-widest transition-all mt-6 md:mt-10 shadow-2xl shadow-white/5"
             >
-              Obter Análise Preliminar
+              VER MINHA REFLEXÃO
             </button>
+            <p className="text-center text-xs text-slate-400 mt-4 font-light">
+              Este questionário é apenas uma reflexão e não substitui uma avaliação psicológica.
+            </p>
           </div>
         ) : (
           <motion.div 
@@ -100,9 +103,12 @@ export const Quiz = () => {
                 onClick={() => { setShowResult(false); setAnswers(new Array(questions.length).fill(0)); }}
                 className="text-slate-400 text-sm font-bold uppercase tracking-widest hover:text-slate-900 transition-colors"
               >
-                Refazer Protocolo
+                Refazer Reflexão
               </button>
             </div>
+            <p className="text-xs text-slate-400 mt-8 font-light text-center">
+              Este questionário é apenas uma reflexão e não substitui uma avaliação psicológica.
+            </p>
           </motion.div>
         )}
       </div>
