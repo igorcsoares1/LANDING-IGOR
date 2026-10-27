@@ -10,7 +10,7 @@ export const StepByStep = () => {
     {
       number: "01",
       title: "Contato Inicial",
-      desc: "Iniciamos com uma conversa breve via WhatsApp para entender sua necessidade e alinhar os primeiros detalhes.",
+      desc: "Uma conversa breve pelo WhatsApp, sem compromisso, para nos conhecermos, você contar o que está vivendo e tirar suas dúvidas sobre como funciona a terapia online.",
       btn: true
     },
     {
