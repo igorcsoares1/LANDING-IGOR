@@ -11,7 +11,7 @@ export const Professional = () => {
     { icon: Award, label: 'CRP 03/27924', desc: 'Registro ativo · CFP' },
     { icon: BookOpen, label: '3 anos', desc: 'De prática clínica' },
     { icon: Heart, label: '+100 pacientes', desc: 'Atendidos' },
-    { icon: Shield, label: 'Sigilo total', desc: 'Ética e confidencialidade' },
+    { icon: Shield, label: 'Sigilo profissional', desc: 'Código de Ética do Psicólogo' },
   ];
 
   return (
@@ -85,7 +85,7 @@ export const Professional = () => {
 
           <div className="space-y-4 text-slate-300 text-base md:text-lg leading-relaxed font-light mb-8">
             <p>
-              Há 3 anos acompanho pessoas que chegaram ao limite — executivos, profissionais e trabalhadores que estavam tão ocupados cuidando de tudo que esqueceram de cuidar de si mesmos.
+              Há 3 anos acompanho adultos que chegaram ao limite com a ansiedade, o esgotamento ou as próprias emoções, pessoas tão ocupadas cuidando de tudo que esqueceram de cuidar de si mesmas.
             </p>
             <p>
               Minha abordagem é direta, empática e sem julgamentos. Utilizamos ferramentas práticas que se encaixam na sua rotina real — porque teoria sem aplicação não transforma nada.

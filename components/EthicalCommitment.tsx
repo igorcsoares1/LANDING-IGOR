@@ -16,12 +16,12 @@ export const EthicalCommitment = () => {
       icon: ShieldCheck,
       title: 'Sigilo Conforme o Código de Ética',
       badge: 'Art. 9º do Código de Ética',
-      desc: 'Confidencialidade estrita e inviolável de tudo o que for compartilhado nas sessões, resguardando integralmente sua privacidade e dignidade.',
+      desc: 'O que é compartilhado nas sessões é protegido pelo sigilo profissional, nos termos do Código de Ética Profissional do Psicólogo.',
     },
     {
       icon: Laptop,
       title: 'Atendimento Online no e-Psi (CFP)',
-      badge: 'Resolução CFP nº 11/2018',
+      badge: 'Resolução CFP nº 9/2024',
       desc: 'Autorizado e cadastrado no sistema e-Psi do Conselho Federal de Psicologia para prestação de serviços psicológicos mediados por tecnologias da informação.',
     },
     {

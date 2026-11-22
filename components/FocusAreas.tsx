@@ -6,28 +6,28 @@ import { motion } from 'motion/react';
 export const FocusAreas = () => {
   const areas = [
     {
-      title: "Síndrome de Burnout",
-      desc: "Quando o alto desempenho se torna sofrimento. Ajudamos a mapear a exaustão e reconstruir limites claros."
+      title: "Ansiedade e crises",
+      desc: "Preocupação constante, aperto no peito, coração acelerado e a sensação de que algo ruim vai acontecer."
     },
     {
-      title: "Exaustão Executiva",
-      desc: "O peso da tomada de decisão constante e a solidão da liderança podem cobrar um preço alto."
+      title: "Burnout e esgotamento",
+      desc: "Cansaço que o descanso não resolve, desânimo e a sensação de estar no limite."
     },
     {
-      title: "Ansiedade de Performance",
-      desc: "A cobrança pelo resultado perfeito gera um estado de alerta que impede o descanso real."
+      title: "Irritabilidade e raiva",
+      desc: "Explosões que depois trazem culpa, impaciência e dificuldade de controlar as reações."
     },
     {
-      title: "Fadiga Mental",
-      desc: "Dificuldade de concentração e 'névoa mental' causadas pelo excesso de demandas cognitivas."
+      title: "Autocobrança e controle",
+      desc: "A exigência de dar conta de tudo e a dificuldade de lidar com erros, seus e dos outros."
     },
     {
-      title: "Crises de Estresse",
-      desc: "Reações intensas do corpo e da mente diante de conflitos ou prazos impossíveis."
+      title: "Sono e cansaço mental",
+      desc: "Dificuldade para dormir, mente acelerada à noite e falta de concentração durante o dia."
     },
     {
-      title: "Identidade & Carreira",
-      desc: "Redescobrir quem você é para além do seu cargo, resgatando valores e prazeres pessoais."
+      title: "Autoestima e relações",
+      desc: "Insegurança, conflitos e fases difíceis como separações e mudanças importantes."
     }
   ];
 
@@ -36,7 +36,7 @@ export const FocusAreas = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 className="font-serif text-3xl md:text-5xl text-slate-950 mb-4 md:mb-6 font-medium">Sinais que merecem sua atenção</h2>
-          <p className="text-sm md:text-lg text-slate-600 font-light">Se você se sente constantemente operando no seu limite físico ou emocional, o cuidado profissional não é uma opção, é uma necessidade estratégica.</p>
+          <p className="text-sm md:text-lg text-slate-600 font-light">Se algum destes pontos faz parte do seu dia a dia, a terapia pode ajudar você a entender o que está acontecendo e a encontrar novos caminhos.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {areas.map((p, i) => (
