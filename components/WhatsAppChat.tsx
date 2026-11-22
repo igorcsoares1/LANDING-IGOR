@@ -15,7 +15,9 @@ export const WhatsAppChat = () => {
   // Show notification bubble after 5 seconds
   useEffect(() => {
     const timer = setTimeout(() => setShowBubble(true), 5000);
-    return () => clearTimeout(timer);
+    // Hide it again so it does not cover the page content (mainly on mobile)
+    const hideTimer = setTimeout(() => setShowBubble(false), 12000);
+    return () => { clearTimeout(timer); clearTimeout(hideTimer); };
   }, []);
 
   // Typing effect when chat opens
@@ -64,7 +66,7 @@ export const WhatsAppChat = () => {
               </div>
               <div className="flex-1">
                 <p className="text-white font-bold text-sm">Igor Soares</p>
-                <p className="text-green-300 text-xs">Psicólogo · Online agora</p>
+                <p className="text-green-300 text-xs">Psicólogo · Responde pelo WhatsApp</p>
               </div>
               <button onClick={() => setOpen(false)} className="text-white opacity-70 hover:opacity-100 transition-opacity">
                 <X className="w-5 h-5" />
@@ -82,7 +84,7 @@ export const WhatsAppChat = () => {
               {/* Igor's message */}
               <div className="flex justify-start mb-3">
                 <div className="max-w-[85%] px-3 py-2 rounded-2xl rounded-tl-none text-sm shadow-sm bg-white text-slate-900">
-                  <p>Olá! 👋 Sou Igor Soares, psicólogo com foco em <strong>Burnout e Ansiedade</strong>.</p>
+                  <p>Olá! 👋 Sou Igor Soares, psicólogo. Atendo online com TCC.</p>
                   <p className="mt-1">Como posso te ajudar hoje?</p>
                   <p className="text-right text-[10px] mt-1 text-slate-400">09:00 ✓✓</p>
                 </div>

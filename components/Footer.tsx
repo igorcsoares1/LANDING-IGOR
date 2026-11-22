@@ -17,7 +17,7 @@ export const Footer = () => {
           <Link href="/termos" className="hover:text-slate-900 transition-colors">Termos</Link>
         </div>
         <div className="text-[10px] text-slate-400 font-medium text-center">
-          © {new Date().getFullYear()} Igor. Todos os direitos reservados.
+          © {new Date().getFullYear()} Igor Soares. Todos os direitos reservados.
         </div>
       </div>
     </footer>

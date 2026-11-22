@@ -5,7 +5,6 @@ import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { FocusAreas } from '@/components/FocusAreas';
 import { Professional } from '@/components/Professional';
-import { Benefits } from '@/components/Benefits';
 import { StepByStep } from '@/components/StepByStep';
 import { Approaches } from '@/components/Approaches';
 import { EthicalCommitment } from '@/components/EthicalCommitment';
@@ -23,7 +22,6 @@ export default function LandingPage() {
       <Hero />
       <FocusAreas />
       <Professional />
-      <Benefits />
       <StepByStep />
       <Approaches />
       <EthicalCommitment />

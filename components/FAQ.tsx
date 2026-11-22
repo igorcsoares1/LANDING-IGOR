@@ -11,7 +11,7 @@ export const FAQ = () => {
   const faqs = [
     { 
       q: "Qual o valor da sessão?", 
-      a: "O valor e as formas de pagamento são informados no primeiro contato pelo WhatsApp, sem compromisso. As sessões são individuais, online, com duração média de 50 minutos." 
+      a: "A sessão individual online custa R$ 120, com duração de 50 minutos. O pagamento pode ser feito por Pix ou cartão. Se tiver dúvidas, é só me chamar no WhatsApp." 
     },
     { 
       q: "Como funciona a primeira sessão?", 
@@ -19,19 +19,19 @@ export const FAQ = () => {
     },
     { 
       q: "Quanto tempo dura o tratamento?", 
-      a: "Não existe uma resposta única — cada pessoa é única. Em média, meus pacientes começam a perceber mudanças reais entre 4 e 8 sessões. O processo terapêutico completo varia conforme seus objetivos, mas muitos relatam transformações significativas em 3 a 6 meses." 
+      a: "Não existe uma resposta única, porque cada pessoa e cada demanda são diferentes. A duração é combinada a partir dos seus objetivos, e revisamos juntos a evolução ao longo do processo." 
     },
     { 
       q: "As sessões são sigilosas?", 
-      a: "Sim, absolutamente. O sigilo profissional é um dever ético e legal do psicólogo. Nenhuma informação compartilhada em sessão será divulgada a terceiros. Isso inclui familiares, empregadores ou qualquer outra pessoa. Você pode falar com total liberdade." 
+      a: "Sim. O sigilo profissional é um dever ético e legal do psicólogo. O que você compartilha em sessão não é repassado a familiares, empregadores ou outras pessoas, salvo nas situações excepcionais previstas no Código de Ética Profissional do Psicólogo." 
     },
     { 
       q: "Preciso de um diagnóstico fechado para começar?", 
-      a: "Não. A terapia para burnout e esgotamento foca tanto na remissão de sintomas quanto na prevenção e otimização emocional. Muitos pacientes buscam suporte ao primeiro sinal de perda de brilho ou desconexão — e isso é inteligente, não fraqueza." 
+      a: "Não. Você pode procurar terapia pelo que está sentindo, sem precisar de diagnóstico. Na primeira sessão entendemos juntos a sua demanda. Buscar ajuda cedo é um cuidado, não uma fraqueza." 
     },
     { 
       q: "Como é garantido o sigilo em sessões online?", 
-      a: "Utilizamos plataformas seguras e criptografadas. Sua privacidade é absoluta, permitindo que discutamos qualquer assunto com total segurança, independente de onde você estiver." 
+      a: "As sessões são feitas por plataforma de videochamada segura, e recomendo que você esteja em um local reservado. Os registros do atendimento são guardados com sigilo, conforme as normas do Conselho Federal de Psicologia." 
     },
     { 
       q: "Qual a duração e frequência das sessões?", 
@@ -39,11 +39,11 @@ export const FAQ = () => {
     },
     { 
       q: "Você emite recibos para reembolso de seguro saúde?", 
-      a: "Sim. Como psicólogo registrado no CRP 03/27924, emito recibos fiscais detalhados que podem ser utilizados para solicitação de reembolso no seu plano de saúde, conforme as regras da sua operadora." 
+      a: "Sim. Emito recibo pelo Receita Saúde (Receita Federal), que pode ser usado no Imposto de Renda e para pedir reembolso ao seu plano de saúde, conforme as regras da sua operadora." 
     },
     { 
       q: "Como sei se a terapia está funcionando?", 
-      a: "Você vai notar: dormir melhor, reagir diferente a situações de pressão, tomar decisões com mais clareza, sentir menos ansiedade no dia a dia. Ao longo do processo, revisamos seus objetivos juntos para garantir que o caminho faz sentido para você." 
+      a: "Ao longo do processo revisamos juntos os seus objetivos e o que mudou no seu dia a dia, como o sono, a forma de reagir a situações difíceis e o nível de ansiedade. Assim avaliamos se o caminho faz sentido para você." 
     }
   ];
 

@@ -22,6 +22,25 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col justify-center py-16 lg:py-24 pr-0 lg:pr-12"
         >
+          {/* Mobile photo */}
+          <div className="lg:hidden flex items-center gap-4 mb-6">
+            <div className="relative w-20 h-20 rounded-full overflow-hidden ring-2 ring-[#c9a84c]/60 shrink-0">
+              <Image
+                src="https://raw.githubusercontent.com/igorcsoares1/LANDING-IGOR/main/igor-foto-profissional.png"
+                alt="Igor Soares, Psicólogo Clínico CRP 03/27924"
+                fill
+                className="object-cover object-top"
+                priority
+                unoptimized={true}
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div>
+              <p className="text-white font-serif text-lg font-semibold leading-tight">Igor Soares</p>
+              <p className="text-slate-400 text-xs">Psicólogo · Terapia online (TCC)</p>
+            </div>
+          </div>
+
           {/* Badge */}
           <div className="inline-flex items-center gap-2 mb-6 self-start">
             <div className="w-2 h-2 rounded-full bg-[#c9a84c] animate-pulse" />
@@ -38,9 +57,9 @@ export const Hero = () => {
           </h1>
 
           <p className="text-slate-300 text-base lg:text-lg leading-relaxed mb-8 max-w-xl font-light">
-            Psicólogo com foco em <strong className="text-white font-semibold">Burnout e Ansiedade</strong>. 
-            Atendo pessoas que chegaram ao limite — esgotadas, sem energia e sem saber como sair desse ciclo. 
-            Atendimento online para todo o Brasil.
+            Terapia online com <strong className="text-white font-semibold">TCC</strong> para adultos que vivem 
+            ansiedade, crises, esgotamento, irritabilidade ou autocobrança, e sentem que não estão dando conta sozinhos. 
+            Sessões por vídeo, para todo o Brasil.
           </p>
 
           {/* Buttons */}
@@ -116,7 +135,7 @@ export const Hero = () => {
       </div>
 
       {/* Mobile image */}
-      <div className="lg:hidden absolute inset-0 opacity-10 pointer-events-none">
+      <div className="lg:hidden absolute inset-0 opacity-[0.04] pointer-events-none">
         <Image
           src="https://raw.githubusercontent.com/igorcsoares1/LANDING-IGOR/main/igor-foto-profissional.png"
           alt="Retrato do Psicólogo Igor Soares para atendimento clínico online"
